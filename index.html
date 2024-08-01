@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Music</title>
+        <script src="https://cdn.tailwindcss.com"></script>
+
+        <script>
+        let audioC = new Audio();
+        audioC.src = "audio/C.mp3";
+
+        let audioAm = new Audio();
+        audioAm.src = "audio/Am.mp3";
+
+        let audioDm = new Audio();
+        audioDm.src = "audio/Dm.mp3";
+
+        let audioG = new Audio();
+        audioG.src = "audio/G.mp3";
+
+        let audioDo = new Audio();
+        audioDo.src = "audio/Do.mp3";
+
+        let audioRe = new Audio();
+        audioRe.src = "audio/Re.mp3";
+
+        let audioMi = new Audio();
+        audioMi.src = "audio/Mi.mp3";
+
+        let audioFa = new Audio();
+        audioFa.src = "audio/Fa.mp3";
+
+        let audioSo = new Audio();
+        audioSo.src = "audio/So.mp3";
+
+        let audioLa = new Audio();
+        audioLa.src = "audio/La.mp3";
+
+        let audioSi = new Audio();
+        audioSi.src = "audio/Si.mp3";
+
+        let audioDo2 = new Audio();
+        audioDo2.src = "audio/Do2.mp3";
+
+        let audiobass = new Audio();
+        audiobass.src = "audio/bass.mp3";
+
+        let audiocrash = new Audio();
+        audiocrash.src = "audio/crash.mp3";
+
+        let audiofloortom = new Audio();
+        audiofloortom.src = "audio/floor-tom.mp3";
+
+        let audiohihatopen = new Audio();
+        audiohihatopen.src = "audio/hihat-open.mp3";
+
+        let audiohihatfoot = new Audio();
+        audiohihatfoot.src = "audio/hihat-foot.mp3";
+
+        let audiohihat = new Audio();
+        audiohihat.src = "audio/hihat.mp3";
+
+        let audioride = new Audio();
+        audioride.src = "audio/ride.mp3";
+
+        let audiosharedrum = new Audio();
+        audiosharedrum.src = "audio/share-drum.mp3";
+
+        let audiosharestick = new Audio();
+        audiosharestick.src = "audio/share-stick.mp3";
+
+        let audiotom1 = new Audio();
+        audiotom1.src = "audio/tom1.mp3";
+
+        let audiotom2 = new Audio();
+        audiotom2.src = "audio/tom2.mp3";
+        </script>
+
+    </head>
+
+<body class="scroll-smooth bg-blue-100"> 
+    
+<!-- gitar -->
+<div class="h-screen overflow-y-auto flex flex-col"></div>
+    <div id="bggit" class="p-8 flex items-center mb-10 rounded-3xl ps-8 mx-8">
+        <div class="bg-gradient-to-r from-amber-800 to-amber-600 py-12 px-5 w-[300px] h-[260px] left-[8px] z-50 rounded-3xl">
+            <div id="gitar" class="flex w-32 h-32 rounded-full bg-slate-700 border-yellow-500 border-8 relative mt-5 left-[86px]"></div>
+        </div>
+      
+        <div class="bg-amber-900 w-[1100px] absolute mt-2 flex h-[100px] cursor-pointer">
+            <div id="senar1" class="w-[984px] h-1.5 bg-yellow-500 absolute bottom-1/2 top-[13px] left-[116px] z-50" onclick="play('C')"></div>
+            <div id="senar2" class="w-[990px] h-1.5 bg-yellow-500 absolute bottom-1/2 top-[35px] left-[110px] z-50" onclick="play('Am')"></div>
+            <div id="senar3" class="w-[990px] h-1.5 bg-yellow-500 absolute bottom-1/2 top-[57px] left-[110px] z-50" onclick="play('Dm')"></div>
+            <div id="senar4" class="w-[982px] h-1.5 bg-yellow-500 absolute bottom-1/2 top-[79px] left-[118px] z-50" onclick="play('G')"></div>
+        </div>
+    </div>
+  
+    <!-- piano -->
+    <div id="piano" class="flex flex-relative justify-center pt-44 mb-60 items-center">
+        <div onclick="mulai('Do')" class=" bg-white border border-black hover:bg-gray-200 text-white w-12 h-40 flex justify-center items-center cursor-pointer shadow-xl">Do</div>
+        <div onclick="mulai('Re')" class=" bg-white border border-black hover:bg-gray-200 text-white w-12 h-40 flex justify-center items-center cursor-pointer shadow-xl">Re</div>
+        <div onclick="mulai('Mi')" class=" bg-white border border-black hover:bg-gray-200 text-white w-12 h-40 flex justify-center items-center cursor-pointer shadow-xl">Mi</div>
+        <div onclick="mulai('Fa')" class=" bg-white border border-black hover:bg-gray-200 text-white w-12 h-40 flex justify-center items-center cursor-pointer shadow-xl">Fa</div>
+        <div onclick="mulai('So')" class=" bg-white border border-black hover:bg-gray-200 text-white w-12 h-40 flex justify-center items-center cursor-pointer shadow-xl">So</div>
+        <div onclick="mulai('La')" class=" bg-white border border-black hover:bg-gray-200 text-white w-12 h-40 flex justify-center items-center cursor-pointer shadow-xl">La</div>
+        <div onclick="mulai('Si')" class=" bg-white border border-black hover:bg-gray-200 text-white w-12 h-40 flex justify-center items-center cursor-pointer shadow-xl">Si</div>
+        <div onclick="mulai('Do2')" class=" bg-white border border-black hover:bg-gray-200 text-white w-12 h-40 flex justify-center items-center cursor-pointer shadow-xl">Do2</div>
+        <div onclick="mulai('Fa')" class="h-20 w-6 border border-black bg-black mb-40 mt-20 absolute left-[567px] cursor-pointer hover:bg-gray-800"></div>
+        <div onclick="mulai('Fa')" class="h-20 w-6 border border-black bg-black mb-40 mt-20 absolute left-[519px] cursor-pointer hover:bg-gray-800"></div>
+        <div onclick="mulai('Fa')" class="h-20 w-6 border border-black bg-black mb-40 mt-20 absolute left-[663px] cursor-pointer hover:bg-gray-800"></div>
+        <div onclick="mulai('Fa')" class="h-20 w-6 border border-black bg-black mb-40 mt-20 absolute left-[711px] cursor-pointer hover:bg-gray-800"></div>
+        <div onclick="mulai('Fa')" class="h-20 w-6 border border-black bg-black mb-40 mt-20 absolute left-[759px] cursor-pointer hover:bg-gray-800"></div>
+    </div>
+
+    <!-- drum -->
+    <div id="drum" class="flex">
+        <div class="absolute flex w-40 h-40 bg-gray-600 rounded-full justify-center left-[600px] top-[250px] items-center mt-16 shadow-2xl border-white border-8 cursor-pointer"  onclick="main('bass')">
+            <div class="text-white font-sans font-semibold font text-2xl items-center">bass</div>
+        </div>
+        <div class="absolute w-24 h-24 bg-gray-600 rounded-full flex justify-center left-[580px] top-48 mr-3 items-center mt-16 shadow-2xl border-sky-700 border-8 cursor-pointer" onclick="main('tom1')">
+            <div class="text-white font-sans font-semibold font items-center">tom1</div>
+        </div>
+        <div class="absolute w-24 h-24 bg-gray-600 rounded-full flex justify-center left-[575px] top-48 items-center mt-16 ml-24 shadow-2xl border-sky-700 border-8 cursor-pointer" onclick="main('tom2')">
+            <div class="text-white font-sans font-semibold font items-center">tom2</div>
+        </div>
+        <div class="absolute w-28 h-28 bg-gray-600 rounded-full flex justify-center left-[650px] top-60 items-center mt-16 ml-24 shadow-2xl border-sky-700 border-8 cursor-pointer" onclick="main('floortom')">
+            <div class="text-white font-sans font-semibold font text-25px items-center">floor-tom</div>
+        </div>
+        <div class="absolute w-28 h-28 bg-sky-700 rounded-full flex justify-center left-[402px] top-60 items-center mt-16 ml-24 shadow-2xl cursor-pointer" onclick="main('sharestick')">
+            <div class="absolute w-24 h-24 bg-gray-600 rounded-full flex justify-center items-center shadow-xl cursor-pointer" onclick="main('sharedrum')">
+                <div class="text-white font-sans font-semibold text-xs flex justify-center items-center">share-drum</div>
+            </div>
+        </div>
+        <div class="absolute w-24 h-24 bg-yellow-300 to-orange-300 rounded-full flex justify-center left-[325px] top-48 items-center mt-16 ml-24 shadow-2xl cursor-pointer" onclick="main('hihat')"></div>
+        <div class="absolute w-24 h-24 bg-yellow-300 to-orange-300 rounded-full flex justify-center left-[325px] top-44 items-center mt-16 ml-24 shadow-2xl cursor-pointer" onclick="main('hihatfoot')">
+            <div class="absolute w-20 h-20 bg-gradient-to-r from-yellow-500 to-red-500 rounded-full flex justify-center items-center shadow-xl cursor-pointer" onclick="main('hihatopen')">
+                <div class="text-white font-sans font-semibold font text-xs flex justify-center items-center">hihat-open</div>
+            </div>
+        </div>
+        <div class="absolute w-28 h-28 bg-gradient-to-r from-yellow-500 to-red-500 rounded-full flex justify-center left-[395px] top-28 items-center mt-20 ml-24 shadow-2xl cursor-pointer" onclick="main('crash')">
+            <div class="text-white font-sans font-semibold font flex justify-center items-center">crash</div>
+        </div>
+        <div class="absolute w-28 h-28 bg-gradient-to-r from-yellow-500 to-red-500  rounded-full flex justify-center top-28 items-center mt-24 ml-24 shadow-xl right-[465px] cursor-pointer" onclick="main('ride')">
+            <div class="text-white font-sans font-semibold font flex justify-center items-center">ride</div>
+        </div>
+    </div>
+</div>
+    
+  
+    
+
+    <script>
+       
+       //drum
+       function main(cetas) {
+        switch (cetas){
+            case 'bass':
+                audiobass.load();
+                audiobass.play();
+                break;
+                case 'crash':
+                audiocrash.load();
+                audiocrash.play();
+                break;
+                case 'floortom':
+                audiofloortom.load();
+                audiofloortom.play();
+                break;
+                case 'hihatfoot':
+                audiohihatfoot.load()
+                audiohihatfoot.play();
+                break;
+                case 'hihatopen':
+                audiohihatopen.load();
+                audiohihatopen.play();
+                break;
+                case 'hihat':
+                audiohihat.load();
+                audiohihat.play();
+                break;
+                case 'ride':
+                audioride.load();
+                audioride.play();
+                break;
+                case 'sharedrum':
+                audiosharedrum.load()
+                audiosharedrum.play();
+                break;
+                case 'sharestick':
+                audiosharestick.load()
+                audiosharestick.play();
+                break;
+                case 'tom1':
+                audiotom1.load()
+                audiotom1.play();
+                break;
+                case 'tom2':
+                audiotom2.load()
+                audiotom2.play();
+                break;
+            
+        }
+
+        document.addEventListener
+        ("keypress", function(){
+            switch(event.key){
+                case "z":
+                main("bass");
+                break;
+                case "x":
+                main("crash");
+                break;
+                case "c":
+                main("floortom");
+                break;
+                case "v":
+                main("hihatopen");
+                break;
+                case "b":
+                main("hihatfoot");
+                break;
+                case "n":
+                main("hihat");
+                break;
+                case "m":
+                main("ride");
+                break;
+                case ",":
+                main("sharedrum");
+                break;
+                case ".":
+                main("sharestick");
+                break;
+                case "/":
+                main("tom1");
+                break;
+                case "'":
+                main("tom2");
+                break;
+            }
+        })
+    }
+
+        //gitar
+        function play(chord) {
+            switch (chord){
+                case 'C':
+                    audioC.load();
+                    audioC.pause();
+                    audioC.currentTime = 1;
+                    audioC.play();
+                    break;
+                case 'Am':
+                    audioAm.load();
+                    audioAm.pause();
+                    audioAm.currentTime = 1;
+                    audioAm.play();
+                    break;
+                case 'Dm':
+                    audioDm.load();
+                    audioDm.pause();
+                    audioDm.currentTime = 1;
+                    audioDm.play();
+                    break;
+                case 'G':
+                    audioG.load();
+                    audioG.pause();
+                    audioG.currentTime = 1;
+                    audioG.play();
+                    break;
+            }
+
+            document.addEventListener
+            ("keypress", function(){
+                switch(event.key){
+                    case "a":
+                    play("C");
+                    break;
+                    case "s":
+                    play("Am");
+                    break;
+                    case "d":
+                    play("Dm");
+                    break;
+                    case "f":
+                    play("G");
+                    break;
+                }
+            }
+        )
+                
+    }
+
+    
+
+        
+        //piano
+        function mulai(bunyi) {
+            switch (bunyi){
+                case 'Do':
+                    audioDo.pause();
+                    audioDo.load();
+                    audioDo.play();
+                    audioG.currentTime = 1;
+                    break;
+                    case 'Re':
+                    audioRe.load();
+                    audioRe.play();
+                    break;
+                    case 'Mi':
+                    audioMi.load();
+                    audioMi.play();
+                    break;
+                    case 'Fa':
+                    audioFa.load()
+                    audioFa.play();
+                    break;
+                    case 'So':
+                    audioSo.load();
+                    audioSo.play();
+                    break;
+                    case 'La':
+                    audioLa.load();
+                    audioLa.play();
+                    break;
+                    case 'Si':
+                    audioSi.load();
+                    audioSi.play();
+                    break;
+                    case 'Do2':
+                    audioDo2.load()
+                    audioDo2.play();
+                    break;
+                
+            }
+
+            document.addEventListener
+            ("keypress", function(){
+                switch(event.key){
+                    case "q":
+                    mulai("Do");
+                    break;
+                    case "w":
+                    mulai("Re");
+                    break;
+                    case "e":
+                    mulai("Mi");
+                    break;
+                    case "r":
+                    mulai("Fa");
+                    break;
+                    case "t":
+                    mulai("So");
+                    break;
+                    case "y":
+                    mulai("La");
+                    break;
+                    case "u":
+                    mulai("Si");
+                    break;
+                    case "i":
+                    mulai("Do2");
+                    break;
+                }
+            })
+        }
+
+        </script>
+</body>
+</html>
